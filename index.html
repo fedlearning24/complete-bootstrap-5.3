@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- navbar Example -->
+        <div class="m-2">
+            <nav class="fixed-top navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="Bootstrap" width="30" height="24">
+                        Bootstrap
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- carousel Example -->
+        <div id="carouselExampleCaptions" class="carousel slide m-2 carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="max-height: 550px;">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="https://images.unsplash.com/photo-1495774539583-885e02cca8c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0ZXJ8ZW58MHx8MHx8fDA%3D"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="https://images.unsplash.com/photo-1439405326854-014607f694d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2F0ZXJ8ZW58MHx8MHx8fDA%3D"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="https://images.unsplash.com/photo-1514907707149-eca420f5de51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdhdGVyfGVufDB8fDB8fHww"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- offcanvas example -->
+        <div class="m-2">
+            <div class="offcanvas offcanvas-bottom hide text-bg-dark" data-bs-scroll="true" data-bs-backdrop="static"
+                tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    Content for the offcanvas goes here. You can place just about any Bootstrap component or custom
+                    elements here.
+                </div>
+            </div>
+        </div>
+        <!-- pagination Example -->
+
+        <div class="m-2">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"> <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"> <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- placeholders example -->
+
+        <div class="m-2">
+            <!-- <p class="placeholder-glow">
+                <span class="placeholder col-6"></span>
+              </p>
+              
+              <p class="placeholder-wave">
+                <span class="placeholder col-12"></span>
+              </p> -->
+        </div>
+
+        <!-- progress Example -->
+
+        <div class="m-2">
+            <div class="progress mb-2" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="progress mb-2" role="progressbar" aria-label="Basic example" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 40%">40%</div>
+            </div>
+            <div class="progress mb-2" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 70%">70%</div>
+            </div>
+            <div class="progress mb-2" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 75%">75%</div>
+            </div>
+            <div class="progress mb-2" role="progressbar" aria-label="Basic example" aria-valuenow="100"
+                aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 100%"></div>
+            </div>
+        </div>
+
+        <!-- spinner example -->
+
+        <div class="m-2 d-flex justify-content-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Toasts Example -->
+        <div class="m-2">
+            <div class="toast show position-fixed bottom-0 end-0 " role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cards Example -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 m-2">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1620435363451-b84b06e6de72?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwaW1hZ2VzfGVufDB8fDB8fHww"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <a href="https://unsplash.com/s/photos/nature-images" class="btn btn-primary">
+                            More Details
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1620435363451-b84b06e6de72?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwaW1hZ2VzfGVufDB8fDB8fHww"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <a href="https://unsplash.com/s/photos/nature-images" class="btn btn-primary">
+                            More Details
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1652946998511-41f80a8096ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlJTIwaW1hZ2VzfGVufDB8fDB8fHww"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <a href="https://unsplash.com/s/photos/nature-images" class="btn btn-primary">
+                            More Details
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BreadCrumbs Example -->
+        <div class="m-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+        <!-- Button Example -->
+        <div class="m-3">
+            <a class="btn btn-outline-primary" href="#" role="button">Link</a>
+            <button class="btn btn-outline-success" type="submit">Button</button>
+            <input class="btn btn-outline-danger" type="button" value="Input">
+        </div>
+        <div class="d-grid gap-2 col-6 m-2 mx-auto">
+            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+        </div>
+        <!-- Alert Example -->
+        <div class="alert m-2 alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- Accordion Example -->
+        <div class="accordion m-2 accordion-flush" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badge Example -->
+        <button type="button" class="btn btn-primary position-relative m-2">
+            Notifications <span class="badge text-bg-secondary position-absolute top-0 rounded-pill bg-danger">4</span>
+        </button>
+        <!-- close button example -->
+        <div class="m-2">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <!-- collapse Example -->
+        <div class="m-2">
+            <p class="d-inline-flex gap-1">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                    aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                    aria-controls="multiCollapseExample2">Toggle second element</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+                    aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both
+                    elements</button>
+            </p>
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                            Some placeholder content for the first collapse component of this multi-collapse example.
+                            This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            Some placeholder content for the second collapse component of this multi-collapse example.
+                            This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- List group example -->
+        <ol class="list-group list-group-numbered m-2">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Subheading</div>
+                    Content for list item
+                </div>
+                <span class="badge text-bg-primary rounded-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Subheading</div>
+                    Content for list item
+                </div>
+                <span class="badge text-bg-primary rounded-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Subheading</div>
+                    Content for list item
+                </div>
+                <span class="badge text-bg-primary rounded-pill">14</span>
+            </li>
+        </ol>
+
+        <!-- Modal Example -->
+        <div class="m-2">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
